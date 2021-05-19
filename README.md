@@ -1,0 +1,1 @@
+# tm-openapi-client-typescript
