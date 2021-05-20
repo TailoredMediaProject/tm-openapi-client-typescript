@@ -1,0 +1,31 @@
+{
+  "name": "@redlink/tm-openapi-client-typescript",
+  "version": "1.0.0",
+  "description": "Generated OpenAPI Client for Tailored Media Project's Document Store",
+  "scripts": {
+    "generate": "openapi-generator-cli generate"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/TailoredMediaProject/tm-openapi-client-typescript.git"
+  },
+  "keywords": [
+    "OpenAPI",
+    "generator",
+    "frontend-client",
+    "typescript"
+  ],
+  "author": "Redlink GmbH", 
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/TailoredMediaProject/tm-openapi-client-typescript/issues"
+  },
+  "homepage": "https://github.com/TailoredMediaProject/tm-openapi-client-typescript#readme",
+  "devDependencies": {
+    "@openapitools/openapi-generator-cli": "^2.2.8",
+    "@redlink/tm-annotation-store-api": "^1.1.1"
+  },
+  "engines": {
+    "node": ">= 12.0.0"
+  }
+}
