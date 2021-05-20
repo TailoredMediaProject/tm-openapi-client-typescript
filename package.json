@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "description": "Generated OpenAPI Client for Tailored Media Project's Document Store",
   "scripts": {
-    "generate": "openapi-generator-cli generate"
+    "generate": "openapi-generator-cli generate -i ./node_modules/@redlink/tm-annotation-store-api/api/doc/spec-$OPENAPIVERSION.yaml -g typescript-axios -o src/openapi --additional-properties=supportsES6=true,withInterfaces=true"
   },
   "repository": {
     "type": "git",

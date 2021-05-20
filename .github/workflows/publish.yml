@@ -1,0 +1,11 @@
+name: Publish Client
+on:
+  repository_dispatch:
+    types: [notify-client-generator]
+jobs:
+  notifyClientGenerator:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - run: npm install
+      - run: OPENAPIVERSION=${{ github.event.client_payload.openAPIVersion }} npm run generate
