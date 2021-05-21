@@ -7,21 +7,17 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
-      - uses: actions/setup-node@v1
         with:
-          node-version: 14
-      - run: npm ci
-      - run: OPENAPIVERSION=${{ github.event.client_payload.openAPIVersion }} npm run generate
-  publishToNpm:
-    runs-on: ubuntu-latest
-    needs: handleNotifyClientGenerator
-    steps:
-      - uses: actions/checkout@v2
+          token: ${{ secrets.REPO_ACCESS_TOKEN }}
       - uses: actions/setup-node@v1
         with:
           node-version: 14
       - run: npm ci
       - run: npm version ${{ github.event.client_payload.openAPIVersion }}
+      - run: OPENAPIVERSION=${{ github.event.client_payload.openAPIVersion }} npm run generate
+      - run: |
+          git commit -am "Generated new client"
+          git push
       - uses: JS-DevTools/npm-publish@v1
         with:
           token: ${{ secrets.NPM_TOKEN }}
