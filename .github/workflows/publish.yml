@@ -10,7 +10,7 @@ jobs:
       - uses: actions/setup-node@v1
         with:
           node-version: 14
-      - run: npm install
+      - run: npm ci
       - run: OPENAPIVERSION=${{ github.event.client_payload.openAPIVersion }} npm run generate
   publishToNpm:
     runs-on: ubuntu-latest
@@ -20,7 +20,7 @@ jobs:
       - uses: actions/setup-node@v1
         with:
           node-version: 14
-      - run: npm install
+      - run: npm ci
       - run: npm version ${{ github.event.client_payload.openAPIVersion }}
       - uses: JS-DevTools/npm-publish@v1
         with:
