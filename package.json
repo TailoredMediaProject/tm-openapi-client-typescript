@@ -15,7 +15,7 @@
     "frontend-client",
     "typescript"
   ],
-  "author": "Redlink GmbH",
+  "author": "markus.ebner@redlink.at",
   "license": "MIT",
   "bugs": {
     "url": "https://github.com/TailoredMediaProject/tm-openapi-client-typescript/issues"
