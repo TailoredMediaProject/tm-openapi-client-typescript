@@ -16,6 +16,8 @@ jobs:
       - run: npm version ${{ github.event.client_payload.openAPIVersion }} --no-commit-hooks --no-git-tag-version
       - run: OPENAPIVERSION=${{ github.event.client_payload.openAPIVersion }} npm run generate
       - run: |
+          git config user.name "GitHub Actions Bot"
+          git config user.email "<>"
           git commit -am "Generated new client"
           git push
       - uses: JS-DevTools/npm-publish@v1
