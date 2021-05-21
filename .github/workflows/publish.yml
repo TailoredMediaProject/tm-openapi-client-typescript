@@ -3,7 +3,7 @@ on:
   repository_dispatch:
     types: [notify-client-generator]
 jobs:
-  notifyClientGenerator:
+  handleNotifyClientGenerator:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
@@ -14,7 +14,7 @@ jobs:
       - run: OPENAPIVERSION=${{ github.event.client_payload.openAPIVersion }} npm run generate
   publishToNpm:
     runs-on: ubuntu-latest
-    needs: notifyClientGenerator
+    needs: handleNotifyClientGenerator
     steps:
       - uses: actions/checkout@v2
       - uses: actions/setup-node@v1
