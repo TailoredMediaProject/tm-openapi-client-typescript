@@ -13,7 +13,7 @@ jobs:
         with:
           node-version: 14
       - run: npm ci
-      - run: npm version --commit-hooks false ${{ github.event.client_payload.openAPIVersion }}
+      - run: npm version ${{ github.event.client_payload.openAPIVersion }} --no-commit-hooks --no-git-tag-version
       - run: OPENAPIVERSION=${{ github.event.client_payload.openAPIVersion }} npm run generate
       - run: |
           git commit -am "Generated new client"
