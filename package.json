@@ -26,7 +26,7 @@
   "homepage": "https://github.com/TailoredMediaProject/tm-openapi-client-typescript#readme",
   "devDependencies": {
     "@openapitools/openapi-generator-cli": "^2.2.8",
-    "@redlink/tm-annotation-store-api": "^2.0.1"
+    "@redlink/tm-annotation-store-api": "^2.0.5"
   },
   "engines": {
     "node": ">= 12.0.0"
