@@ -1,9 +1,9 @@
 {
   "name": "@redlink/tm-openapi-client-typescript",
-  "version": "1.2.0",
+  "version": "1.3.0",
   "description": "Generated OpenAPI Client for Tailored Media Project's Document Store",
   "scripts": {
-    "generate": "openapi-generator-cli generate -i ./node_modules/@redlink/tm-annotation-store-api/api/doc/spec-$OPENAPIVERSION.yaml -g typescript-axios -o ./ --additional-properties=supportsES6=true,withInterfaces=true"
+    "generate": "openapi-generator-cli generate -i ./node_modules/@redlink/tm-annotation-store-api/api/resource/spec-$OPENAPIVERSION.yaml -g typescript-axios -o ./ --additional-properties=supportsES6=true,withInterfaces=true"
   },
   "repository": {
     "type": "git",
@@ -16,6 +16,9 @@
     "typescript"
   ],
   "author": "markus.ebner@redlink.at",
+  "contributors": [
+    "thomas.kurz@redlink.at"
+  ],
   "license": "MIT",
   "bugs": {
     "url": "https://github.com/TailoredMediaProject/tm-openapi-client-typescript/issues"
@@ -23,7 +26,7 @@
   "homepage": "https://github.com/TailoredMediaProject/tm-openapi-client-typescript#readme",
   "devDependencies": {
     "@openapitools/openapi-generator-cli": "^2.2.8",
-    "@redlink/tm-annotation-store-api": "^1.1.1"
+    "@redlink/tm-annotation-store-api": "^2.0.1"
   },
   "engines": {
     "node": ">= 12.0.0"
